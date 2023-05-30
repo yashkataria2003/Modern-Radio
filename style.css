@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&family=Shantell+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=IBM+Plex+Serif:wght@200&family=Shantell+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Comfortaa:wght@300&family=IBM+Plex+Serif:wght@200&family=Shantell+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+*::-webkit-scrollbar-track {
+    background: grey;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 3vh;
+    border: 3vh solid black;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 0rem 2rem;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    height: 13vh;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, 0.584);
+    border-radius: 2rem;
+    margin-top: 4rem;
+}
+
+#mr_logo {
+    height: 14vh;
+}
+
+#mr_title {
+    height: 14vh;
+}
+
+.nav a {
+    display: flex;
+    border: 2px solid white;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    height: 62vh;
+    width: 40vw;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.584);
+    border-radius: 2rem;
+    margin: 1rem 0rem;
+    box-sizing: border-box;
+}
+
+.player img {
+    height: 50vh;
+}
+
+.player p {
+    color: white;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 1rem 0rem;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 62vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.584);
+    border-radius: 2rem;
+    padding: 1rem 0rem;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+.playlist li:hover {
+    height: 6.5vh;
+    width: 40.5vw;
+    border: 0.2rem solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.619);
+    border-radius: 2rem;
+    color: white;
+}
+
+.SONGITEMS {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    list-style: none;
+    height: 6vh;
+    width: 40vw;
+    border: 0.2rem solid black;
+    background-color: rgba(255, 255, 255, 0.619);
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.SONGITEMS img {
+    height: 7.5vh;
+}
+
+.SONGITEMS span {
+    font-size: 1.6rem;
+}
+
+.SONGITEMS p {
+    font-size: 1.6rem;
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15.5vh;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, 0.584);
+    border-radius: 2rem;
+    padding: 1rem 0rem;
+    box-sizing: border-box;
+}
+
+.progress_content input {
+    width: 60vw;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60vw;
+    padding: 0.3rem 0rem;
+    box-sizing: border-box;
+}
+
+.controls img {
+    height: 10vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    gap: 1rem;
+}
+
+#giphy {
+    opacity: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 100vw;
+    /* border: 2px solid red; */
+    background-color: rgba(255, 255, 255, 0.619);
+    margin: 1rem 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 580px) and (max-width: 769px) {
+    .SONGITEMS {
+        height: 5vh;
+        width: 35vw;
+    }
+
+    .controls img {
+        height: 8vh;
+    }
+
+    .playlist li:hover {
+        height: 5.5vh;
+        width: 35.5vw;
+        border: 0.2rem solid rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.619);
+        border-radius: 2rem;
+        color: white;
+    }
+
+    .player img {
+        height: 40vh;
+    }
+
+    .player p {
+        font-size: 1.5rem;
+    }
+
+    .SONGITEMS img {
+        height: 6vh;
+    }
+
+    .SONGITEMS span {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 579px) {
+
+    .nav {
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        height: 34vh;
+        margin-top: 20rem;
+    }
+
+    #mr_title {
+        display: none;
+    }
+
+    .nav a {
+        border: 0.1rem solid white;
+        width: 13vw;
+    }
+
+    .main {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .player {
+        height: 40vh;
+        width: 94vw;
+    }
+
+    .player img {
+        height: 30vh;
+    }
+
+    .playlist {
+        width: 94vw;
+    }
+
+    .playlist li:hover {
+        height: 5.5vh;
+        width: 68.5vw;
+        border: 0.2rem solid rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.619);
+        border-radius: 2rem;
+        color: white;
+    }
+
+    .SONGITEMS {
+        height: 5vh;
+        width: 68vw;
+    }
+
+    .controls img {
+        height: 8vh;
+    }
+
+    .player p {
+        font-size: 1.5rem;
+    }
+
+    .SONGITEMS img {
+        height: 6vh;
+    }
+
+    .SONGITEMS span {
+        font-size: 1.2rem;
+    }
+
+    .progress {
+        height: 12.5vh;
+        margin: 3rem 0rem;
+    }
+
+    .controls img {
+        height: 6vh;
+    }
+}
